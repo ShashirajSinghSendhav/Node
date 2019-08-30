@@ -1,0 +1,16 @@
+npx
+
+npm init -y for yes to all
+
+express generators
+
+client side rendering
+
+server side rendering
+
+angular json
+
+headers 
+morgans for log in
+
+collection in postman get post
