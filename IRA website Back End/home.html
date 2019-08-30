@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>home</title>
+    </head>
+     
+    <body>
+     <script>
+
+
+$(document).ready(function(){
+   
+
+    $.ajax({
+			type : "GET",
+            url : "http://localhost:3020/home",
+     		success: function(result){
+                console.log("Success: ", result);
+                // alert(result);
+                $('#a').html("<h1 id='a'>"+ result[1].firstname+"</h1> ");
+                // document.getElementById("a").innerHTML=result;
+			},
+			error : function(e) {
+				console.log("ERROR: ", e);
+			}
+		});	
+// alert(result);[""0""]
+// $("p").html(result);
+});
+
+// $(document).ready(function(){
+//   $("button").click(function(){
+//     $.get("http://localhost:3020/home", function(data, status){
+//       alert("Data: " + data + "\nStatus: " + status);
+//     });
+//   });
+// });
+</script>
+
+
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+<p>this is paragraph</p>
+<h1 id="a"> </h1>
+</body>
+</html>
